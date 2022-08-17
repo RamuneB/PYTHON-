@@ -23,11 +23,9 @@ users = """
 users_trans = json.loads(users)
 def getUserAverageAge(users):
     users_age = 0
-    users_sk = 0
     for age in users:              
       users_age = users_age + int((age['age']))
-      users_sk += 1
-    average_age = users_age/users_sk
+    average_age = users_age/len(users)
     return average_age
 
 print(f" Amžiaus vidurkis:", getUserAverageAge(users_trans))
