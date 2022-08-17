@@ -37,6 +37,6 @@ def getUsersNames(users):
     for us in users:              
      users_list.append(us['name'])
    
-    return users_list
+    return sorted(users_list)
 
 print(f" Users:", getUsersNames(users_trans))
