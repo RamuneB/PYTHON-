@@ -15,24 +15,15 @@ class Movie:
         self.director = director
         self.budget = budget
 
-
-movie1 = Movie("Velnio nuotaka", "Zebriunas", 80000)
-movie2= Movie("Tadas Blinda.Pradžia", "Ulvydas", 90000 )
-
-movie = []    
-movie.append(movie1)
-movie.append(movie2)
-
-
-for mov in movie:
-    print(mov.budget)
-def wasExpensive(self, budget): 
-    for mov in movie:
-        if mov.budget > 100000:
-            print("True")
-        else:            
-             print("False")
-
+    def wasExpensive(self): 
     
-    movie.wasExpensive()
+        if self.budget > 100000000:
+            return True
+        else:            
+            return False
+
+movie1 = Movie("Velnio nuotaka", "Zebriunas", 8000000)
+movie2 = Movie("Tadas Blinda.Pradžia", "Ulvydas", 9000000000 )   
+print(f"Velnio nuotaka budget:", movie1.wasExpensive())
+print(f"Tadas Blinda budget:",movie2.wasExpensive())
    
